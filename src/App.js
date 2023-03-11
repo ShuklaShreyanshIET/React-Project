@@ -9,17 +9,17 @@ import Routing from "./pages/RoutingApp";
 
 
 function App() {
-  // const [currentForm, setCurrentForm] = useState('login');
+  const [currentForm, setCurrentForm] = useState('login');
 
-  // const toggleForm = (formName) => {
-  //   setCurrentForm(formName);
-  // }
+  const toggleForm = (formName) => {
+    setCurrentForm(formName);
+  }
 
   return (
     <div className="App">
-      {/* {
+      {
         currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-      } */}
+      }
       <Login />
       <Routes>
         <Route path="/dashboard/*" element=<Dashboard /> />
